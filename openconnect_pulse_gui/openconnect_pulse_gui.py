@@ -248,6 +248,8 @@ def do_openconnect(server, authcookie, run_openconnect=True):
         "openconnect",
         "--protocol",
         "nc",
+        "--csd-wrapper",
+        "/usr/libexec/openconnect/tncc-emulate.py",
         "-C",
         '{}={}'.format(authcookie.name, authcookie.value),
         server,
