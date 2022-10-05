@@ -249,7 +249,7 @@ def do_openconnect(server, authcookie, run_openconnect=True):
         "--protocol",
         "nc",
         "--csd-wrapper",
-        "/usr/libexec/openconnect/tncc-emulate.py",
+        "/usr/libexec/openconnect/tncc-wrapper.py",
         "-C",
         '{}={}'.format(authcookie.name, authcookie.value),
         server,
